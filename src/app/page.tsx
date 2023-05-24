@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import { NextPage } from 'next'
 
 const Home: NextPage = () => {
   return (
@@ -8,7 +8,7 @@ const Home: NextPage = () => {
         <p>This is a Next.js application. 😎</p>
       </section>
     </main>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
