@@ -8,8 +8,6 @@ export default function DashboardLayout({
 }) {
   return (
     <section className="flex flex-col h-screen">
-      {children}
-
       {/* Bottom Navbar */}
       <nav className="flex justify-around items-center h-16 bg-gray-100 border-t border-gray-200 dark:bg-gray-700 dark:border-gray-600">
         <Link href="/dashboard/search">
@@ -23,6 +21,7 @@ export default function DashboardLayout({
           </div>
         </Link>
       </nav>
+      {children}
     </section>
   );
 }
