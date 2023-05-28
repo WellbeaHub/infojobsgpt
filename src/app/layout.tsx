@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -14,8 +15,19 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="es">
+      <body className={clsx(inter.className, 'p-10')}>
+        <header className="py-7">
+          <h1 className="text-lg ">
+            Welcome Back,{' '}
+            <strong className="tracking-wider text-black/80 font-extrabold ">
+              let´s Find Your Job! 🔥
+            </strong>
+          </h1>
+        </header>
+
+        {children}
+      </body>
     </html>
   )
 }
