@@ -1,7 +1,7 @@
 import { NextPage } from 'next'
 import { Card } from '../../components/Card'
 import { LogoJob } from '../../components/LogoJob'
-import { Tab, Tabs } from '../../components/Tabs'
+import { Tabs } from '../../components/Tabs'
 import { TitleJob } from '../../components/TitleJob'
 
 const cards = [
@@ -10,6 +10,8 @@ const cards = [
   { key: 'Ubicación', value: 'Remoto' },
   { key: 'Experiencia minima', value: '2 años' },
 ]
+
+const tabs = [{ name: 'Descripcion' }, { name: 'Caracteristicas' }]
 
 const Home: NextPage = () => {
   return (
@@ -37,19 +39,15 @@ const Home: NextPage = () => {
           </div>
 
           <div className="container mx-auto mt-4">
-            <Tabs>
-              <Tab label="Descripción">
-                <div>
-                  <h2>Descripción Tab</h2>
-                  <p>Contenido de la descripción...</p>
-                </div>
-              </Tab>
-              <Tab label="Compañía">
-                <div>
-                  <h2>Compañía Tab</h2>
-                  <p>Contenido de la compañía...</p>
-                </div>
-              </Tab>
+            <Tabs tabs={tabs}>
+              <div>
+                <h2>Descripción Tab</h2>
+                <p>Contenido de la descripción...</p>
+              </div>
+              <div>
+                <h2>Compañía Tab</h2>
+                <p>Contenido de la compañía...</p>
+              </div>
             </Tabs>
           </div>
         </div>
